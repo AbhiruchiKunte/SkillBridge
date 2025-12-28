@@ -1,67 +1,117 @@
-# SkillBridge_Team3
-This project aims to create a web-based platform where skilled volunteers can connect with NGOs for short-term or long-term volunteer opportunities. The application allows users to register as volunteers or NGOs, enabling them to post or apply for skill-based opportunities. 
+# 🌉 SkillBridge
 
-<img width="1410" height="452" alt="image" src="https://github.com/user-attachments/assets/2b068c00-e86d-47ee-84b5-e1a66d06db1b" styles />
+**SkillBridge** is a web-based platform designed to connect **skilled volunteers** with **NGOs** for both short-term and long-term volunteer opportunities.  
+The platform promotes **social impact** by enabling NGOs to post skill-based opportunities while allowing volunteers to discover, apply for, and collaborate on meaningful initiatives.
 
-# How to run
-1. Go to ```frontend/``` and type
-```bash
-npm i
-npm run dev
+This project was developed as part of my **Infosys Springboard Virtual Internship 6.0 (Batch 4)** in the **Angular Full Stack domain** 🚀✨
+
+---
+
+<img width="1410" alt="SkillBridge Preview" src="https://github.com/user-attachments/assets/2b068c00-e86d-47ee-84b5-e1a66d06db1b" />
+
+---
+## 🛠️ Tech Stack
+
+| Category | Technologies Used |
+|--------|------------------|
+| **Frontend** | ReactJS, React Router, Socket.io-client, Axios, React-Hot-Toast |
+| **Backend** | Node.js, ExpressJS |
+| **Database** | MongoDB (Mongoose) |
+| **Communication & Utilities** | Socket.io (Real-time Chat), Nodemailer (Email Notifications) |
+| **Authentication & Security** | JSON Web Tokens (JWT), Cookie-parser, Environment variables (`.env`) |
+
+---
+
+## 🚀 Key Features
+
+- **Personalized User Experience**  
+  Separate registration, onboarding, and dashboard workflows for **Volunteers** and **NGOs**.
+
+- **Opportunity Management**  
+  NGOs can create and manage skill-based opportunities, while volunteers can explore and apply directly through the platform.
+
+- **Real-time Chat System**  
+  Seamless real-time communication between NGOs and volunteers powered by **Socket.io**.
+
+- **Profile Customization**  
+  Users can update personal information, change avatars, and reset passwords.
+
+- **Live Notifications**  
+  Instant feedback and alerts using **React-Hot-Toast** for an improved user experience.
+
+- **Secure Authentication**  
+  Robust session handling with JWT and protected routes.
+
+---
+## 📁 Project Structure
+
+```txt
+📁 SkillBridge
+├── 📁 frontend                  # React Frontend
+│   ├── 📁 node_modules           # Node.js dependencies
+│   ├── 📁 public
+│   │   └── index.html            # Browser entry point
+│   ├── 📁 src
+│   │   ├── 📁 components         # Reusable UI components (Navbar, Footer)
+│   │   ├── 📁 contexts
+│   │   │   └── AuthContext.jsx   # Manages user session & utilities
+│   │   ├── 📁 pages
+│   │   │   ├── 📁 Chats          # Real-time chat interface
+│   │   │   ├── 📁 Assets         # Public images
+│   │   │   ├── 📁 Auth           # Login, registration & onboarding
+│   │   │   ├── 📁 Dashboard      # Volunteer & NGO dashboards
+│   │   │   ├── 📁 Profiles       # User profile management
+│   │   │   └── 📁 Utils          # Toast notifications & helpers
+│   │   │
+│   │   ├── App.jsx               # Main app wrapped in layout
+│   │   └── index.js              # React entry point
+│   │
+│   ├── .env                      # Frontend environment variables
+│   └── package.json
+│
+├── 📁 backend                   # ExpressJS Backend
+│   ├── 📁 node_modules           # Node.js dependencies
+│   ├── 📁 src
+│   │   ├── 📁 config             # Database & storage configuration
+│   │   ├── 📁 controllers        # Business logic (auth, users, opportunities)
+│   │   ├── 📁 middleware         # Authentication & route protection
+│   │   ├── 📁 models             # MongoDB schemas
+│   │   ├── 📁 routes             # API endpoints
+│   │   ├── 📁 utils              # Utility functions (JWT, helpers)
+│   │   ├── 📁 uploads            # Uploaded files
+│   │   └── server.js             # Express & Socket.io server entry
+│   │
+│   ├── .env                      # Backend environment variables
+│   └── package.json
+│
+└── README.md                     # Project documentation
 ```
-2. Go to ```backend/``` and type
-```bash
-npm i
-npm run dev
-```
+---
 
-# Frontend (ReactJS)
+## 🧪 Usage
 
-```js
-📁 node_modules //node.js files
-📁 public
-   └── index.html // browser entry point
-📁 src
-   └── 📁 components // footer and navbar
-   └── 📁 contexts
-          └── AuthContext.jsx // handles compelete user session as well as utility functions.
-   └── 📁 pages
-          └── 📁 Chats 
-          └── 📁 Assets // public images
-          └── 📁 Auth // login/register and personalization
-          └── 📁 Dashboard
-          └── 📁 Profiles
-          └── 📁 Utils // toast
-   └── App.jsx //homepage wrapped inside layout
-   └── Index.js // react layout
-.env // for secure variable
-package.json
-```
+- Register as a **Volunteer** or an **NGO**
 
-## Key Feature:
+### NGOs can:
+- Create and manage skill-based opportunities  
+- Communicate with volunteers in real time  
 
-- ReactToast for event updates
-- Profile page for customization, avatar and password change
-- Authentication and user session for personalized experience
-- Interactive Chat feature for connection between volunteer and ngo
+### Volunteers can:
+- Browse available opportunities  
+- Apply directly through the platform  
+- Chat with NGOs  
 
-# Backend (ExpressJS)
+- Receive **live notifications** and **email alerts**
 
-```js
-📁 node_modules //node.js files
-📁 src 
-   └── 📁 config // root settings for database, file storages etc. (like connection)
-   └── 📁 controllers // main logic of auth, users, etc.
-   └── 📁 middleware // comes between api routes for adding more logic (like auth, redrecting, ip blocking)
-   └── 📁 models // mongodb models
-   └── 📁 routes // api routes
-   └── 📁 utils // utility like jwt token generation
-   └── 📁 uploads // uploaded blobs
-   └── server.js //main server
-.env // for secure variable
-package.json
-```
+---
 
-## Key Features
+## 🌟 Internship Acknowledgment
 
-- 
+This project was developed during the **Infosys Springboard Virtual Internship 6.0 (Batch 4)**.  
+It helped strengthen my understanding of:
+
+- Full Stack Development  
+- REST APIs  
+- Real-time communication using Socket.io  
+- Secure authentication using JWT  
+- MongoDB data modeling  
